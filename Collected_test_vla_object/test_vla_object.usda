@@ -1,0 +1,3156 @@
+#usda 1.0
+(
+    customLayerData = {
+        dictionary cameraSettings = {
+            dictionary Front = {
+                double3 position = (5, 0, 0)
+                double radius = 5
+            }
+            dictionary Perspective = {
+                double3 position = (0.7503466134535948, 0.2728873631781534, 0.8664914329940493)
+                double3 target = (-220.14783856892225, -4.335277662768321, -71.62457841424724)
+            }
+            dictionary Right = {
+                double3 position = (0, -5, 0)
+                double radius = 5
+            }
+            dictionary Top = {
+                double3 position = (0, 0, 5)
+                double radius = 5
+            }
+            string boundCamera = "/World/Camera_front"
+        }
+        dictionary metricsAssembler = {
+            dictionary "/World/The_ultimate_glass_pack_cups_and_bottles" = {
+            }
+            dictionary "/World/_______________" = {
+            }
+            dictionary "/World/floor_room_usdz" = {
+            }
+            dictionary "/floor_room_usdz" = {
+            }
+            dictionary "/floor_room_usdz_01" = {
+            }
+            dictionary "/old_wooden_table_and_chair" = {
+            }
+            dictionary "/old_wooden_table_and_chair_01" = {
+            }
+            int version = 1
+        }
+        dictionary omni_layer = {
+            string authoring_layer = "./test1.usda"
+            dictionary locked = {
+            }
+            dictionary muteness = {
+            }
+        }
+        dictionary physicsSettings = {
+            int "/persistent/simulation/minFrameRate" = 10
+        }
+        dictionary renderSettings = {
+            bool "rtx:useViewLightingMode" = 1
+        }
+    }
+    endTimeCode = 1000000
+    metersPerUnit = 1
+    startTimeCode = 0
+    timeCodesPerSecond = 10
+    upAxis = "Z"
+)
+
+def Xform "World"
+{
+    quatd xformOp:orient = (1, 0, 0, 0)
+    double3 xformOp:scale = (1, 1, 1)
+    double3 xformOp:translate = (0, 0, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+    def "FlatGrid" (
+        prepend references = @./omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/Environments/Grid/default_environment.usd@
+    )
+    {
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "Environment"
+        {
+            over "Geometry"
+            {
+                double3 xformOp:scale = (100.30000149458647, 100, 1)
+            }
+        }
+    }
+
+    def "old_wooden_table_and_chair" (
+        prepend payload = @./home/benjiamin/Downloads/old_wooden_table_and_chair.usdz@
+    )
+    {
+        quatf xformOp:orient = (1, 0, 0, 0)
+        double xformOp:rotateX:unitsResolve = 90
+        float3 xformOp:scale = (4.0956435, 4.693858, 1)
+        double3 xformOp:scale:unitsResolve = (0.01, 0.01, 0.01)
+        double3 xformOp:translate = (0.0030441376684545015, 0.11185663723354833, -0.000027731589308799265)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale", "xformOp:rotateX:unitsResolve", "xformOp:scale:unitsResolve"]
+
+        over "Meshes"
+        {
+            over "Sketchfab_model"
+            {
+                over "Old_wooden_table_and_chair_fbx"
+                {
+                    over "RootNode"
+                    {
+                        over "chair" (
+                            active = false
+                        )
+                        {
+                            over "Object_7"
+                            {
+                                over "chair_chair_0"
+                                {
+                                    over "chair_chair_0" (
+                                        active = false
+                                    )
+                                    {
+                                    }
+                                }
+                            }
+                        }
+
+                        over "chair001" (
+                            active = false
+                        )
+                        {
+                            over "Object_10"
+                            {
+                                over "chair001_chair_0"
+                                {
+                                    over "chair001_chair_0" (
+                                        active = false
+                                    )
+                                    {
+                                    }
+                                }
+                            }
+                        }
+
+                        over "old_table"
+                        {
+                            over "Object_4"
+                            {
+                                over "old_table_old_table_0"
+                                {
+                                    over "old_table_old_table_0" (
+                                        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxConvexDecompositionCollisionAPI", "PhysxTriangleMeshCollisionAPI", "PhysxSDFMeshCollisionAPI"]
+                                    )
+                                    {
+                                        vector3f physics:angularVelocity = (-0.0006879297, -0.002339326, 0.000011491074)
+                                        uniform token physics:approximation = "convexHull"
+                                        bool physics:collisionEnabled = 1
+                                        bool physics:kinematicEnabled = 0
+                                        bool physics:rigidBodyEnabled = 1
+                                        vector3f physics:velocity = (0.000009821392, 0.000017463062, -0.00010831609)
+                                        quatf xformOp:orient = (1, 0, 0, 0)
+                                        float3 xformOp:scale = (1, 1, 1)
+                                        float3 xformOp:translate = (0.182886, -0.05808632, -0.10574175)
+                                        token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    def "_02_master_chef_can" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+        prepend payload = @./Isaac_sim/assets/Assets/Isaac/4.5/Isaac/Props/YCB/Axis_Aligned/002_master_chef_can.usd@
+    )
+    {
+        bool physics:kinematicEnabled = 0
+        float physics:mass = 0.2
+        bool physics:rigidBodyEnabled = 1
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (0.5, 0.5, 0.90000004)
+        double3 xformOp:translate = (0.1587467073446739, 0.6575165604130672, 0.5583828430491576)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "_02_master_chef_can" (
+            prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "MaterialBindingAPI", "PhysicsMassAPI"]
+        )
+        {
+            rel material:binding:physics = </World/VLAHighFrictionContactMaterial> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (0.49432108, 1.1280558, 0.13723788)
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (0.0018112069, -0.00058586604, -0.00027298188)
+            quatf xformOp:orient = (-0.70020753, 0.7076519, -0.07272666, 0.06040682)
+            float3 xformOp:scale = (0.009, 0.01, 0.009)
+            double3 xformOp:translate = (-0.19869892299175262, -0.007497973274439573, 0.05044853687286377)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+    }
+
+    def "_03_cracker_box" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsMassAPI"]
+        prepend payload = @./Isaac_sim/assets/Assets/Isaac/4.5/Isaac/Props/YCB/Axis_Aligned/003_cracker_box.usd@
+    )
+    {
+        vector3f physics:angularVelocity = (-0.00023109958, -0.0014812836, 0.0010972146)
+        bool physics:kinematicEnabled = 0
+        float physics:mass = 0.2
+        bool physics:rigidBodyEnabled = 1
+        vector3f physics:velocity = (-0.000005542975, 0.000019173114, -0.000105692)
+        quatf xformOp:orient = (0.99994683, 0.007311917, -0.0037931625, 0.0062031965)
+        float3 xformOp:scale = (1, 1, 0.90000004)
+        double3 xformOp:translate = (0.3110710322160787, -0.31724038758838075, 0.5322654843330383)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "_03_cracker_box" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "MaterialBindingAPI", "PhysxConvexDecompositionCollisionAPI", "PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+        )
+        {
+            rel material:binding:physics = </World/VLAHighFrictionContactMaterial> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            uniform token physics:approximation = "convexDecomposition"
+            bool physics:collisionEnabled = 1
+            float physics:density = 150.6
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.01, 0.01, 0.01)
+            double3 xformOp:translate = (-0.17582242264325018, 0, 0.04610606738717349)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+    }
+
+    def "franka_alt_fingers" (
+        prepend payload = @./Isaac_sim/assets/Assets/Isaac/4.5/Isaac/Robots/Franka/franka_alt_fingers.usd@
+    )
+    {
+        quatd xformOp:orient = (1, 0, 0, 0)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-0.451334685087204, -0.047424010932445526, 0.5415499210357666)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "panda_link0"
+        {
+            vector3f physics:angularVelocity = (0, 0, 0)
+            vector3f physics:velocity = (0, 0, 0)
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:translate = (-5.9604645e-8, 0, 0)
+
+            over "geometry"
+            {
+                over "ID3_000frA" (
+                    prepend apiSchemas = ["PhysxConvexDecompositionCollisionAPI", "MaterialBindingAPI"]
+                )
+                {
+                    custom rel material:binding:physics = </World/VLAHighFrictionContactMaterial> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                    uniform token physics:approximation = "convexDecomposition"
+                }
+            }
+        }
+
+        over "panda_link1"
+        {
+            vector3f physics:angularVelocity = (1.1771583e-9, -5.600392e-18, 0.0073694442)
+            vector3f physics:velocity = (2.4201168e-13, 1.6298273e-12, -3.865761e-20)
+            quatf xformOp:orient = (0.99496806, 1.4733055e-8, 1.2624203e-8, 0.10019289)
+            float3 xformOp:translate = (-5.9604645e-8, -3.7252903e-9, 0.33299983)
+
+            over "geometry"
+            {
+                over "ID3_000" (
+                    prepend apiSchemas = ["PhysxConvexDecompositionCollisionAPI", "MaterialBindingAPI"]
+                )
+                {
+                    custom rel material:binding:physics = </World/VLAHighFrictionContactMaterial> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                    uniform token physics:approximation = "convexDecomposition"
+                }
+            }
+        }
+
+        over "panda_link2"
+        {
+            vector3f physics:angularVelocity = (0.09900282, -0.4865898, 0.007369479)
+            vector3f physics:velocity = (3.0480307e-10, 6.310927e-11, -1.2018159e-10)
+            quatf xformOp:orient = (-0.6827229, 0.70571935, -0.044274904, -0.18409054)
+            float3 xformOp:translate = (-5.9604645e-8, -2.2351742e-8, 0.33299977)
+
+            over "geometry"
+            {
+                over "ID3_000" (
+                    prepend apiSchemas = ["PhysxConvexDecompositionCollisionAPI", "MaterialBindingAPI"]
+                )
+                {
+                    custom rel material:binding:physics = </World/VLAHighFrictionContactMaterial> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                    uniform token physics:approximation = "convexDecomposition"
+                }
+            }
+        }
+
+        over "panda_link3"
+        {
+            vector3f physics:angularVelocity = (0.0932457, -0.4877612, -0.010008363)
+            vector3f physics:velocity = (-0.002544894, -0.00050450675, 0.0008771082)
+            quatf xformOp:orient = (0.9855681, -0.024563588, 0.16042577, 0.04812239)
+            float3 xformOp:translate = (0.0991787, 0.020179251, 0.6323528)
+
+            over "geometry"
+            {
+                over "ID17_001" (
+                    prepend apiSchemas = ["PhysxConvexDecompositionCollisionAPI", "MaterialBindingAPI"]
+                )
+                {
+                    custom rel material:binding:physics = </World/VLAHighFrictionContactMaterial> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                    uniform token physics:approximation = "convexDecomposition"
+                }
+            }
+        }
+
+        over "panda_link4"
+        {
+            vector3f physics:angularVelocity = (0.114862904, -0.69694746, -0.0030696173)
+            vector3f physics:velocity = (-0.002319902, -0.00047533706, 0.0015517117)
+            quatf xformOp:orient = (-0.25015798, -0.17375049, -0.6732917, 0.67372847)
+            float3 xformOp:translate = (0.17705005, 0.02735464, 0.60606956)
+
+            over "geometry"
+            {
+                over "ID25_000frA" (
+                    prepend apiSchemas = ["PhysxConvexDecompositionCollisionAPI", "MaterialBindingAPI"]
+                )
+                {
+                    custom rel material:binding:physics = </World/VLAHighFrictionContactMaterial> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                    uniform token physics:approximation = "convexDecomposition"
+                    matrix4d xformOp:transform = ( (3.4228536335323297e-8, 0, -0.99999980529044, 0), (0, 0.9999998743882951, 0, 0), (0.999999908550396, 0, 3.422853986976114e-8, 0), (0, 0, 0, 1) )
+                }
+            }
+        }
+
+        over "panda_link5"
+        {
+            vector3f physics:angularVelocity = (0.11358441, -0.69701844, -0.0012331939)
+            vector3f physics:velocity = (0.0009397421, 0.00004634912, 0.0050780172)
+            quatf xformOp:orient = (0.2994241, -0.09730881, 0.9490425, -0.0139465695)
+            float3 xformOp:translate = (0.4635251, 0.04807277, 0.3381797)
+
+            over "geometry"
+            {
+                over "ID11_000" (
+                    prepend apiSchemas = ["PhysxConvexDecompositionCollisionAPI", "MaterialBindingAPI"]
+                )
+                {
+                    custom rel material:binding:physics = </World/VLAHighFrictionContactMaterial> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                    uniform token physics:approximation = "convexDecomposition"
+                }
+            }
+        }
+
+        over "panda_link6"
+        {
+            vector3f physics:angularVelocity = (0.10051696, -0.6243499, -0.0075128907)
+            vector3f physics:velocity = (0.0009397421, 0.00004634912, 0.0050780172)
+            quatf xformOp:orient = (0.72350544, 0.67644846, -0.006707165, 0.13752237)
+            float3 xformOp:translate = (0.4635251, 0.04807277, 0.3381797)
+
+            over "geometry"
+            {
+                over "ID389_001frA" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    custom rel material:binding:physics = </World/VLAHighFrictionContactMaterial> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+            }
+        }
+
+        over "panda_link7"
+        {
+            vector3f physics:angularVelocity = (0.17249128, -0.640608, -0.34542572)
+            vector3f physics:velocity = (0.00075418985, 0.0000050217095, 0.006029907)
+            quatf xformOp:orient = (-0.015806757, 0.9269156, -0.3596098, 0.1061055)
+            float3 xformOp:translate = (0.5481885, 0.06478588, 0.35540664)
+
+            over "geometry"
+            {
+                over "ID1683_001" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    custom rel material:binding:physics = </World/VLAHighFrictionContactMaterial> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "ID1683_001frA" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    custom rel material:binding:physics = </World/VLAHighFrictionContactMaterial> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+            }
+        }
+
+        over "panda_link8"
+        {
+            vector3f physics:angularVelocity = (0.17249128, -0.640608, -0.34542572)
+            vector3f physics:velocity = (0.0018926626, 0.00018549661, 0.006263712)
+            quatf xformOp:orient = (-0.015806757, 0.92691565, -0.35960978, 0.1061055)
+            float3 xformOp:translate = (0.57045203, 0.059755802, 0.25086945)
+        }
+
+        over "panda_hand"
+        {
+            vector3f physics:angularVelocity = (0.17249128, -0.640608, -0.34542572)
+            vector3f physics:velocity = (0.0018926626, 0.00018549661, 0.006263712)
+            quatf xformOp:orient = (0.026001288, 0.9939751, 0.02247915, 0.10407768)
+            float3 xformOp:translate = (0.57045203, 0.059755802, 0.25086945)
+
+            def Camera "Camera_wrist"
+            {
+                float2 clippingRange = (0.01, 10000000)
+                float focalLength = 13.195157
+                float focusDistance = 400
+                float horizontalAperture = 20.25
+                bool omni:kit:cameraLock = 1
+                custom uniform vector3d omni:kit:centerOfInterest = (0, 0, -400)
+                float verticalAperture = 20.25
+                quatd xformOp:orient = (0, 0.7071067811865476, 0.7071067811865476, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0.05, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+            }
+
+            over "geometry"
+            {
+                over "panda_hand"
+                {
+                    double3 xformOp:rotateZYX = (0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZYX", "xformOp:scale"]
+
+                    over "ID234_001frA" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        custom rel material:binding:physics = </World/VLAHighFrictionContactMaterial> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+                    }
+
+                    over "ID234_001m4u" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        custom rel material:binding:physics = </World/VLAHighFrictionContactMaterial> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+                    }
+                }
+
+                over "realsense"
+                {
+                    token visibility = "invisible"
+                    double3 xformOp:rotateZYX = (0, 0, 270)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZYX", "xformOp:scale"]
+
+                    over "ID4_000" (
+                        delete apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysxCookedDataAPI:convexHull"]
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        custom rel material:binding:physics = </World/VLAHighFrictionContactMaterial> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+                    }
+
+                    over "ID4_000m4u" (
+                        delete apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysxCookedDataAPI:convexHull"]
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        custom rel material:binding:physics = </World/VLAHighFrictionContactMaterial> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+                    }
+                }
+            }
+        }
+
+        over "panda_leftfinger" (
+            prepend apiSchemas = ["PhysxContactReportAPI"]
+        )
+        {
+            vector3f physics:angularVelocity = (0.17249128, -0.640608, -0.34542572)
+            vector3f physics:velocity = (0.0024236534, 0.00021245569, 0.006359164)
+            float physxContactReport:threshold = 0
+            float physxRigidBody:sleepThreshold = 0
+            quatf xformOp:orient = (0.02600129, 0.9939751, 0.022479175, 0.10407768)
+            float3 xformOp:translate = (0.58315283, 0.043051615, 0.19460237)
+
+            over "geometry"
+            {
+                over "ID27" (
+                    prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxConvexDecompositionCollisionAPI", "MaterialBindingAPI", "PhysxTriangleMeshCollisionAPI", "PhysxContactReportAPI"]
+                )
+                {
+                    custom rel material:binding:physics = </World/VLAHighFrictionContactMaterial> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                    uniform token physics:approximation = "none"
+                    bool physics:collisionEnabled = 1
+                    float physxContactReport:threshold = 0
+                    token visibility = "inherited"
+
+                    def IsaacContactSensor "vla_contact_sensor"
+                    {
+                        float4 color = (1, 1, 1, 1)
+                        bool enabled = 1
+                        float radius = 0.008
+                        float sensorPeriod = 0
+                        float2 threshold = (0, 1000000)
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0.04600000008940697)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+
+                over "ID27fa3" (
+                    prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxConvexDecompositionCollisionAPI", "PhysxTriangleMeshCollisionAPI", "MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding:physics = </World/VLAHighFrictionContactMaterial> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                    uniform token physics:approximation = "convexDecomposition"
+                    bool physics:collisionEnabled = 1
+                }
+
+                over "ID27SVM" (
+                    prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxConvexDecompositionCollisionAPI", "MaterialBindingAPI", "PhysxContactReportAPI"]
+                )
+                {
+                    custom rel material:binding:physics = </World/VLAHighFrictionContactMaterial> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                    uniform token physics:approximation = "convexDecomposition"
+                    bool physics:collisionEnabled = 1
+                    float physxContactReport:threshold = 0
+                }
+            }
+
+            def Cube "vla_finger_pad_collision" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI", "PhysxContactReportAPI"]
+            )
+            {
+                rel material:binding:physics = </World/VLAHighFrictionContactMaterial> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                float physxContactReport:threshold = 0
+                uniform token purpose = "guide"
+                double size = 1
+                custom string vla_contact_role = "robosuite_finger_pad"
+                double3 xformOp:scale = (0.016, 0.008, 0.016)
+                double3 xformOp:translate = (0, 0.0035, 0.041)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+
+                def IsaacContactSensor "vla_contact_sensor"
+                {
+                    float4 color = (1, 1, 1, 1)
+                    bool enabled = 1
+                    float radius = 0.008
+                    float sensorPeriod = 0
+                    float2 threshold = (0, 1000000)
+                    quatd xformOp:orient = (1, 4.895411187533227e-9, -1.4183047625238032e-8, 2.1000236216650592e-8)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+            }
+        }
+
+        over "panda_rightfinger" (
+            prepend apiSchemas = ["PhysxContactReportAPI"]
+        )
+        {
+            vector3f physics:angularVelocity = (0.17249128, -0.640608, -0.34542572)
+            vector3f physics:velocity = (0.0026093952, 0.00023163643, 0.0064305216)
+            float physxContactReport:threshold = 0
+            float physxRigidBody:sleepThreshold = 0
+            quatf xformOp:orient = (0.026001286, 0.9939751, 0.022479126, 0.10407768)
+            float3 xformOp:translate = (0.5820532, 0.07098467, 0.1930241)
+
+            over "geometry"
+            {
+                over "ID27" (
+                    prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxConvexDecompositionCollisionAPI", "PhysxTriangleMeshCollisionAPI", "PhysxSDFMeshCollisionAPI", "PhysxSphereFillCollisionAPI", "MaterialBindingAPI", "PhysxContactReportAPI"]
+                )
+                {
+                    custom rel material:binding:physics = </World/VLAHighFrictionContactMaterial> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                    uniform token physics:approximation = "convexDecomposition"
+                    bool physics:collisionEnabled = 1
+                    float physxContactReport:threshold = 0
+                    token visibility = "inherited"
+
+                    def IsaacContactSensor "vla_contact_sensor"
+                    {
+                        float4 color = (1, 1, 1, 1)
+                        bool enabled = 1
+                        float radius = 0.008
+                        float sensorPeriod = 0
+                        float2 threshold = (0, 1000000)
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0.04600000008940697)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+
+                over "ID27fa3" (
+                    prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxConvexDecompositionCollisionAPI", "MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding:physics = </World/VLAHighFrictionContactMaterial> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                    uniform token physics:approximation = "convexDecomposition"
+                    bool physics:collisionEnabled = 1
+                }
+
+                over "ID27SVM" (
+                    prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "PhysxConvexDecompositionCollisionAPI", "MaterialBindingAPI", "PhysxContactReportAPI"]
+                )
+                {
+                    custom rel material:binding:physics = </World/VLAHighFrictionContactMaterial> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                    uniform token physics:approximation = "convexDecomposition"
+                    bool physics:collisionEnabled = 1
+                    float physxContactReport:threshold = 0
+                }
+            }
+
+            def Cube "vla_finger_pad_collision" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI", "PhysxContactReportAPI"]
+            )
+            {
+                rel material:binding:physics = </World/VLAHighFrictionContactMaterial> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                float physxContactReport:threshold = 0
+                uniform token purpose = "guide"
+                double size = 1
+                custom string vla_contact_role = "robosuite_finger_pad"
+                double3 xformOp:scale = (0.016, 0.008, 0.016)
+                double3 xformOp:translate = (0, -0.0035, 0.041)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+
+                def IsaacContactSensor "vla_contact_sensor"
+                {
+                    float4 color = (1, 1, 1, 1)
+                    bool enabled = 1
+                    float radius = 0.008
+                    float sensorPeriod = 0
+                    float2 threshold = (0, 1000000)
+                    quatd xformOp:orient = (1, -1.602827026658815e-8, 1.7506987859405854e-8, -1.0135765116103812e-8)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+            }
+        }
+    }
+
+    def Camera "Camera_front"
+    {
+        custom token cameraProjectionType (
+            allowedTokens = ["pinhole", "fisheyeOrthographic", "fisheyeEquidistant", "fisheyeEquisolid", "fisheyePolynomial", "fisheyeSpherical", "fisheyeKannalaBrandtK3", "fisheyeRadTanThinPrism", "omniDirectionalStereo"]
+        )
+        float2 clippingRange = (0.01, 10000000)
+        float focalLength = 24.443913
+        float focusDistance = 400
+        custom float fthetaCx
+        custom float fthetaCy
+        custom float fthetaHeight
+        custom float fthetaMaxFov
+        custom float fthetaPolyA
+        custom float fthetaPolyB
+        custom float fthetaPolyC
+        custom float fthetaPolyD
+        custom float fthetaPolyE
+        custom float fthetaWidth
+        float horizontalAperture = 20.25
+        bool omni:kit:cameraLock = 1
+        custom uniform vector3d omni:kit:centerOfInterest = (0, 0, -400)
+        float verticalAperture = 20.25
+        quatd xformOp:orient = (0.6380177212293417, 0.30484971880648903, 0.30484983801576876, 0.6380177212293417)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.8672784895962731, -0.047424010932445526, 1.239899945073009)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+    }
+
+    def "_24_bowl" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsMassAPI"]
+        prepend payload = @./Isaac_sim/assets/Assets/Isaac/4.5/Isaac/Props/YCB/Axis_Aligned/024_bowl.usd@
+    )
+    {
+        vector3f physics:angularVelocity = (0.15960872, 0.20614953, 0.46158174)
+        bool physics:kinematicEnabled = 0
+        float physics:mass = 0.2
+        bool physics:rigidBodyEnabled = 1
+        vector3f physics:velocity = (0.00032797648, -0.000032027485, -0.00014604269)
+        token visibility = "inherited"
+        quatf xformOp:orient = (0.7084215, -0.70486873, -0.026755817, 0.024148114)
+        float3 xformOp:scale = (0.7, 1.1, 0.7)
+        double3 xformOp:translate = (0.12373466044664372, -0.02728426642715932, 0.5781965547409939)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "_24_bowl" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "MaterialBindingAPI", "PhysxConvexDecompositionCollisionAPI", "PhysxTriangleMeshCollisionAPI", "PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+        )
+        {
+            rel material:binding:physics = </World/VLAHighFrictionContactMaterial> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            uniform token physics:approximation = "convexDecomposition"
+            bool physics:collisionEnabled = 1
+            float physics:density = 50.2
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+        }
+    }
+
+    def "_11_banana" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsMassAPI"]
+        prepend payload = @./Isaac_sim/assets/Assets/Isaac/4.5/Isaac/Props/YCB/Axis_Aligned/011_banana.usd@
+    )
+    {
+        vector3f physics:angularVelocity = (-0.8688978, -0.1473287, 0.08307754)
+        float physics:density = 195.3
+        bool physics:kinematicEnabled = 0
+        float physics:mass = 0.2
+        bool physics:rigidBodyEnabled = 1
+        vector3f physics:velocity = (-0.00020306393, 0.00050919823, -0.00019422754)
+        quatf xformOp:orient = (0.58685416, 0.80772924, 0.04685458, 0.031309184)
+        float3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.06723279702207612, 0.16187657318763957, 0.5637465008520441)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "_11_banana" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI", "MaterialBindingAPI", "PhysxConvexDecompositionCollisionAPI", "PhysxTriangleMeshCollisionAPI", "PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+        )
+        {
+            rel material:binding:physics = </World/VLAHighFrictionContactMaterial> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            uniform token physics:approximation = "convexDecomposition"
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+        }
+    }
+
+    def Material "VLAHighFrictionContactMaterial" (
+        prepend apiSchemas = ["PhysicsMaterialAPI"]
+    )
+    {
+        float physics:dynamicFriction = 1.5
+        float physics:restitution = 0
+        float physics:staticFriction = 2
+    }
+}
+
+over "Render" (
+    hide_in_stage_window = true
+)
+{
+    over "OmniverseKit"
+    {
+        over "HydraTextures"
+        {
+            over "Replicator"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_01"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_02"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_03"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_04"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_05"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_06"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_07"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_08"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_09"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_10"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_11"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_12"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_13"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_14"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_15"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_16"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_17"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_18"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_19"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_20"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_21"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_22"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_23"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_24"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_25"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_26"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_27"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_28"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_29"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_30"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_31"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_32"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_33"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_34"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_35"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_36"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_37"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_38"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_39"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_40"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_41"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_42"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_43"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_44"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_45"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_46"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_47"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_48"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_49"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_50"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_51"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_52"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_53"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_54"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_55"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_56"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_57"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_58"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_59"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_60"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_61"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_62"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_63"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_64"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_65"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_66"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_67"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_68"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_69"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_70"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_71"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_72"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_73"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_74"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_75"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_76"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_77"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_78"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_79"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_80"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_81"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_82"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_83"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_84"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_85"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_86"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_87"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_88"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_89"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_90"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_91"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_92"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_93"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_94"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_95"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_96"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_97"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_98"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_99"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_100"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_101"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_102"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_103"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_104"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_105"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_106"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_107"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_108"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_109"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_110"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_111"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_112"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_113"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_114"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_115"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_116"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_117"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_118"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_119"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_120"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_121"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_122"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_123"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_124"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_125"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_126"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_127"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_128"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_129"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_130"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_131"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_132"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_133"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_134"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_135"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_136"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_137"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_138"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_139"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_140"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_141"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_142"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_143"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_144"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_145"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_146"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_147"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_148"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_149"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_150"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_151"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_152"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_153"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_154"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_155"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_156"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_157"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_158"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_159"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_160"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_161"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_162"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_163"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_164"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_165"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_166"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_167"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_168"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_169"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_170"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_171"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_172"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_173"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_174"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_175"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_176"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_177"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_178"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_179"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_180"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_181"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_182"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_183"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_184"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_185"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_186"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_187"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_188"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_189"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_190"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_191"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_192"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_193"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_194"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_195"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_196"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_197"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_198"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_199"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_200"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_201"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_202"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_203"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_204"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_205"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_206"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_207"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_208"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_209"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_210"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_211"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_212"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_213"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_214"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_215"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_216"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_217"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_218"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_219"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_220"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_221"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_222"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_223"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_224"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_225"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_226"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_227"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_228"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_229"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_230"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_231"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_232"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_233"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_234"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_235"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_236"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_237"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_238"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_239"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_240"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_241"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_242"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_243"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_244"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_245"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_246"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_247"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_248"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_249"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_250"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_251"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_252"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_253"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_254"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_255"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_256"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_257"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_258"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_259"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_260"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_261"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_262"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_263"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_264"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_265"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_266"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_267"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_268"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_269"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_270"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_271"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_272"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_273"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_274"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_275"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_276"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_277"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_278"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_279"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_280"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_281"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_282"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_283"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_284"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_285"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_286"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_287"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_288"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_289"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_290"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_291"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_292"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_293"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_294"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_295"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_296"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_297"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_298"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_299"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_300"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_301"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_302"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_303"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_304"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_305"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_306"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_307"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_308"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_309"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_310"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_311"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_312"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_313"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_314"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_315"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_316"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_317"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_318"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_319"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_320"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_321"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_322"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_323"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_324"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_325"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_326"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_327"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_328"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_329"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_330"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_331"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "Replicator_332"
+            {
+                over "PostRender"
+                {
+                }
+            }
+
+            over "omni_kit_widget_viewport_ViewportTexture_0"
+            {
+                uniform int2 resolution = (256, 256)
+            }
+
+            over "omni_kit_widget_viewport_ViewportTexture_1"
+            {
+                uniform int2 resolution = (256, 256)
+            }
+        }
+    }
+}
+
+over "PhysicsScene_16e12ee3daea"
+{
+    uint physxScene:timeStepsPerSecond = 500
+}
+

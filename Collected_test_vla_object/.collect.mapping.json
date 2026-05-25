@@ -1,0 +1,83 @@
+{
+    "version": "1.0",
+    "file_records": [
+        {
+            "source_url": "/home/benjiamin/Downloads/old_wooden_table_and_chair.usdz",
+            "source_hash": "280b50e9c8d8810abf8aa7cc2a9bdbb46d74cfbe",
+            "target_url": "./home/benjiamin/Downloads/old_wooden_table_and_chair.usdz",
+            "target_hash": "427887564e7ce6819eecefec55edb178833fd1be"
+        },
+        {
+            "source_url": "/media/benjiamin/U/Isaac_sim/assets/Assets/Isaac/4.5/Isaac/Props/YCB/Axis_Aligned/Materials/Textures/011_banana_COLOR.png",
+            "source_hash": "faf810f8d575fe60130aa75192c64b8cd056caf0",
+            "target_url": "./Isaac_sim/assets/Assets/Isaac/4.5/Isaac/Props/YCB/Axis_Aligned/Materials/Textures/011_banana_COLOR.png",
+            "target_hash": "7b271b2113153e49c172040ecf642198d2f990c7"
+        },
+        {
+            "source_url": "/media/benjiamin/U/Isaac_sim/assets/Assets/Isaac/4.5/Isaac/Props/YCB/Axis_Aligned/Materials/Textures/002_master_chef_can_COLOR.png",
+            "source_hash": "50b47476251ee1bdfed6ee70e7231afa8a947d7d",
+            "target_url": "./Isaac_sim/assets/Assets/Isaac/4.5/Isaac/Props/YCB/Axis_Aligned/Materials/Textures/002_master_chef_can_COLOR.png",
+            "target_hash": "9b23c1e6ca7363aa5603ec1d42e3ccdd47feb910"
+        },
+        {
+            "source_url": "/media/benjiamin/U/Isaac_sim/assets/Assets/Isaac/4.5/Isaac/Props/YCB/Axis_Aligned/Materials/Textures/003_cracker_box_COLOR.png",
+            "source_hash": "af5ff9d08efd3008ce3e1d4ea85bbfe2a3527d5b",
+            "target_url": "./Isaac_sim/assets/Assets/Isaac/4.5/Isaac/Props/YCB/Axis_Aligned/Materials/Textures/003_cracker_box_COLOR.png",
+            "target_hash": "fdf10f27c840a6e6e466fcb94b3baeb95e7935ff"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/Environments/Grid/Materials/Textures/WireframeBlur_basecolor.png",
+            "source_hash": "334f59bbf2768420132e1138e889ed4b46df68c5",
+            "target_url": "./omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/Environments/Grid/Materials/Textures/WireframeBlur_basecolor.png",
+            "target_hash": "bc3a12979c8161db28ce45177520041c263360e4"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/Environments/Grid/Materials/Textures/WireframeBlur_blue.png",
+            "source_hash": "99922df2035a3c33aa242908bdc7332675e728d2",
+            "target_url": "./omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/Environments/Grid/Materials/Textures/WireframeBlur_blue.png",
+            "target_hash": "378c0ced3f3e683e646ce154f11b52ef5f5cab64"
+        },
+        {
+            "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/Environments/Grid/Materials/Textures/Wireframe_blue.png",
+            "source_hash": "d3618b28226361a4144928dcbf5ec5ad1a594766",
+            "target_url": "./omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/Environments/Grid/Materials/Textures/Wireframe_blue.png",
+            "target_hash": "bf1dcd860b0b2bdf184c400ab21f209e610135c0"
+        },
+        {
+            "source_url": "/media/benjiamin/U/Isaac_sim/assets/Assets/Isaac/4.5/Isaac/Props/YCB/Axis_Aligned/Materials/Textures/024_bowl_COLOR.png",
+            "source_hash": "053c0136601a80f4d5e522efa75a56b8449b4062",
+            "target_url": "./Isaac_sim/assets/Assets/Isaac/4.5/Isaac/Props/YCB/Axis_Aligned/Materials/Textures/024_bowl_COLOR.png",
+            "target_hash": "7baa2dbd1a47a22aa4623ec917f8db0d0e0fd9c5"
+        },
+        {
+            "source_url": "/media/benjiamin/U/Isaac_sim/assets/Assets/Isaac/4.5/Isaac/Robots/Franka/DetailedProps/Materials/Textures/Logo_Textures_Albedo.png",
+            "source_hash": "318dee73776787c60ef972a856f332b5f582af26",
+            "target_url": "./Isaac_sim/assets/Assets/Isaac/4.5/Isaac/Robots/Franka/DetailedProps/Materials/Textures/Logo_Textures_Albedo.png",
+            "target_hash": "c2a9ebe9cbd1e4b5c9847933d08d831cbae5a23c"
+        },
+        {
+            "source_url": "/media/benjiamin/U/Isaac_sim/assets/Assets/Isaac/4.5/Isaac/Robots/Franka/DetailedProps/Materials/Textures/Logo_Textures_Metallic.png",
+            "source_hash": "1cbc7ab6a69c264e542261e0bf070323deeb0a06",
+            "target_url": "./Isaac_sim/assets/Assets/Isaac/4.5/Isaac/Robots/Franka/DetailedProps/Materials/Textures/Logo_Textures_Metallic.png",
+            "target_hash": "8971ad96fb30f66370e07d4958f54ddcefacdd9d"
+        },
+        {
+            "source_url": "/media/benjiamin/U/Isaac_sim/assets/Assets/Isaac/4.5/Isaac/Robots/Franka/DetailedProps/Materials/Textures/Logo_Textures_Opacity.png",
+            "source_hash": "8d02291b74cea307cce8ccaa033f5a97c03494fe",
+            "target_url": "./Isaac_sim/assets/Assets/Isaac/4.5/Isaac/Robots/Franka/DetailedProps/Materials/Textures/Logo_Textures_Opacity.png",
+            "target_hash": "31a4f4f23dc62c6c7bbc3eee5f5e80553fa99d0a"
+        },
+        {
+            "source_url": "/media/benjiamin/U/Isaac_sim/assets/Assets/Isaac/4.5/Isaac/Robots/Franka/DetailedProps/Materials/Textures/Logo_Textures_roughness.png",
+            "source_hash": "76d721a4e31f03e7e6fdba8122673bb61a8bbf69",
+            "target_url": "./Isaac_sim/assets/Assets/Isaac/4.5/Isaac/Robots/Franka/DetailedProps/Materials/Textures/Logo_Textures_roughness.png",
+            "target_hash": "007531cc8882786c38375eee911935096f845747"
+        },
+        {
+            "source_url": "/media/benjiamin/U/Isaac_sim/assets/Assets/Isaac/4.5/Isaac/Robots/Franka/DetailedProps/Materials/Textures/normal.png",
+            "source_hash": "09ceb29307ba83fbbdba36e4d4b390e1380d5c17",
+            "target_url": "./Isaac_sim/assets/Assets/Isaac/4.5/Isaac/Robots/Franka/DetailedProps/Materials/Textures/normal.png",
+            "target_hash": "4b1a10cb8eff6957a5f2fd5c5162292bf0edabc5"
+        }
+    ]
+}
